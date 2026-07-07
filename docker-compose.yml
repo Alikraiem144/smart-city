@@ -1,0 +1,27 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: crowd_mapping_db
+    restart: always
+    environment:
+      POSTGRES_DB: crowd_mapping
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: manela14031818
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: .
+    container_name: crowd_mapping_backend
+    restart: always
+    depends_on:
+      - postgres
+    ports:
+      - "3000:3000"
+    environment:
+      DB_NAME: crowd_mapping
+      DB_USER: postgres
+      DB_PASSWORD: manela14031818
+      DB_HOST: postgres
+      DB_PORT: 5432
+      JWT_SECRET: mysecretkey
