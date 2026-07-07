@@ -1,6 +1,4 @@
-هاو README.md كامل ومنظم. انسخو كامل وحطو في الملف:
 
-````md
 # Crowd Mapping Backend
 
 ## 1. Project Objective
