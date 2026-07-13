@@ -89,46 +89,60 @@ The goal of the project is to manage a crowd-mapping system for road defect repo
 ## 4. Project Structure
 
 ```text
-src
+crowd-mapping-backend
 │
-├── config
-│   └── database.ts
+├── keys
+│   ├── private.key
+│   └── public.key
 │
-├── controllers
-│   ├── authController.ts
-│   ├── reportController.ts
-│   └── userController.ts
+├── src
+│   ├── config
+│   │   └── database.ts
+│   │
+│   ├── controllers
+│   │   ├── authController.ts
+│   │   ├── reportController.ts
+│   │   └── userController.ts
+│   │
+│   ├── middlewares
+│   │   ├── adminMiddleware.ts
+│   │   ├── authMiddleware.ts
+│   │   ├── coinsMiddleware.ts
+│   │   ├── errorMiddleware.ts
+│   │   └── validationMiddleware.ts
+│   │
+│   ├── models
+│   │   ├── Report.ts
+│   │   └── User.ts
+│   │
+│   ├── routes
+│   │   ├── authRoutes.ts
+│   │   ├── reportRoutes.ts
+│   │   └── userRoutes.ts
+│   │
+│   ├── seeders
+│   │   └── seed.ts
+│   │
+│   ├── tests
+│   │   ├── adminMiddleware.test.ts
+│   │   └── validationMiddleware.test.ts
+│   │
+│   ├── utils
+│   │   └── jwt.ts
+│   │
+│   └── server.ts
 │
-├── middlewares
-│   ├── adminMiddleware.ts
-│   ├── authMiddleware.ts
-│   ├── coinsMiddleware.ts
-│   ├── errorMiddleware.ts
-│   └── validationMiddleware.ts
-│
-├── models
-│   ├── Report.ts
-│   └── User.ts
-│
-├── routes
-│   ├── authRoutes.ts
-│   ├── reportRoutes.ts
-│   └── userRoutes.ts
-│
-├── seeders
-│   └── seed.ts
-│
-├── tests
-│   ├── adminMiddleware.test.ts
-│   └── validationMiddleware.test.ts
-│
-├── utils
-│   └── jwt.ts
-│
-└── server.ts
+├── .env
+├── .gitignore
+├── docker-compose.yml
+├── Dockerfile
+├── generateKeys.cjs
+├── jest.config.js
+├── package.json
+├── package-lock.json
+├── README.md
+└── tsconfig.json
 ```
-
----
 
 ## 5. Installation
 
