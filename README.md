@@ -1,4 +1,3 @@
-
 # Crowd Mapping Backend
 
 ## 1. Project Objective
